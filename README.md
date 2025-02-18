@@ -41,7 +41,7 @@ write 1 byte into register 0x01 to set LED states
 - `0b00001000` - mute
 - `0b?0000???` - standby
 
-OTHER PINS (non-i2c):
+# Other Pin Behaviour (non-i2c)
 
 LED_PWRSTBY: a low-side switched LED output. the LED is on the motherboard  
 this probably works similar to the other LEDs on register 0x01
