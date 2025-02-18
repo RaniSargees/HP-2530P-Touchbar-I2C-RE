@@ -1,14 +1,14 @@
-#I2C register/command documentation for the HP 2530p touchbar
+# I2C register/command documentation for the HP 2530p touchbar
 
 device address is 0x28
 
-#startup
+# startup
 
 write 0x02 into register 0x00 to clear interrupt
 
 write 0x00 into register 0x01 to initialize LEDs
 
-#BUTTONS
+# BUTTONS
 
 when the interrupt pin goes high
 
@@ -17,7 +17,7 @@ read 2 bytes from register 0x03 to determine which button is pressed
 write 0x02 into register 0x00 to clear interrupt
 
 
-##Register 0x03 button mapping
+## Register 0x03 button mapping
 
 - `0b10000000 00000000` - vol up
 - `0b01000000 00000000` - vol down
@@ -29,11 +29,11 @@ write 0x02 into register 0x00 to clear interrupt
 
 the volume slider is fake, it just sends buttonpress events
 
-#LEDS
+# LEDS
 
 write 1 byte into register 0x01 to set LED states
 
-##LED register 0x01 mapping
+## LED register 0x01 mapping
 
 - `0b01000000` - caps lock
 - `0b00100000` - num lock
