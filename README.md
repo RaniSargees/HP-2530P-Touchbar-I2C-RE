@@ -2,13 +2,13 @@
 
 device address is 0x28
 
-# startup
+# Startup
 
 write 0x02 into register 0x00 to clear interrupt
 
 write 0x00 into register 0x01 to initialize LEDs
 
-# BUTTONS
+# Buttons
 
 when the interrupt pin goes high
 
@@ -29,7 +29,7 @@ write 0x02 into register 0x00 to clear interrupt
 
 the volume slider is fake, it just sends buttonpress events
 
-# LEDS
+# LEDs
 
 write 1 byte into register 0x01 to set LED states
 
@@ -49,3 +49,7 @@ this probably works similar to the other LEDs on register 0x01
 LED_WL_SW#: switches the WIFI LED from orange to blue when pulled low
 
 CAP_SENS_RST: reset the controller chip for all this stuff
+
+# Pinout
+
+![pinout](pinout.png)
